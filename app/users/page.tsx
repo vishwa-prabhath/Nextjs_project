@@ -14,7 +14,7 @@ const userspage = async () => {
   return (
     <>
     <h1>Users</h1>
-    <table>
+    <table className='table table-bordered'>
       <thead>
         <tr>
           <th>Name</th>
@@ -22,11 +22,14 @@ const userspage = async () => {
         </tr>
       </thead>
       <tbody>
-      {users.map(user =><tr key={user.id}><th>
+      {users.map(user =><tr key={user.id}>
+        <td>
         {user.name}
-      </th>
-      <th>
-        {user.email}</th></tr> )}
+      </td>
+      <td>
+        {user.email}
+        </td>
+        </tr> )}
       </tbody>
     </table>
     
